@@ -4,7 +4,7 @@ Plugin Name: Weather Hacks
 Plugin URI: http://firegoby.theta.ne.jp/wp/weatherhacks
 Description: ライブドアのWeatherHacksのサイドバーウィジェット
 Author: Takayuki Miyauchi (THETA NETWORKS Co,.Ltd)
-Version: 0.5
+Version: 0.6
 Author URI: http://firegoby.theta.ne.jp/
 */
 
@@ -73,10 +73,10 @@ public function widget($args, $instance) {
     echo '<div class="weather-block" id="weatherhacks-'.$id.'">';
     echo "</div>";
     echo $after_widget;
-    add_action('wp_footer', array(&$this, 'wp_footer'));
+    add_action('wp_print_footer_scripts', array(&$this, 'wp_print_footer_scripts'));
 }
 
-public function wp_footer()
+public function wp_print_footer_scripts()
 {
 ?>
 <script type="text/javascript">
