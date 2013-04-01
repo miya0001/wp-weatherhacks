@@ -3,8 +3,9 @@
     padding-bottom: 10px;
     overflow: auto;
     display: table;
-    border: 1px solid #cccccc;
-    width: 100%;
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .weathers
 {
