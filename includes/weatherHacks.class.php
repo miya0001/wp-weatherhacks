@@ -23,7 +23,7 @@ public function get_data()
 {
     $data = get_transient('weatherhacks-'.$this->cityID);
     if ($data) {
-        return $data;
+        //return $data;
     }
 
     $res = wp_remote_get(sprintf($this->url, $this->cityID));
@@ -64,8 +64,10 @@ public function get_data()
         'あさって',
     );
     $tpl = $this->get_template();
+    $style_width = number_format(1 / count($data) * 100, 1, '.', '');
     foreach ($data as $d) {
         $o = $tpl;
+        $o = str_replace("%style_width%", $style_width, $o);
         $o = str_replace("%title%", $title[$i], $o);
         $o = str_replace('%img%', $d['img'], $o);
         $o = str_replace('%width%', $d['width'], $o);
@@ -84,7 +86,7 @@ public function get_data()
 
 private function get_template()
 {
-    return '<div class="wtr">
+    return '<div class="wtr" style="width:%style_width%%">
     <h4 class="wtr-title">%title%</h4>
     <div class="wtr-image">
         <img src="%img%" width="%width%" height="%height%" title="%weather%">
