@@ -23,7 +23,7 @@ public function get_data()
 {
     $data = get_transient('weatherhacks-'.$this->cityID);
     if ($data) {
-        //return $data;
+        return $data;
     }
 
     $res = wp_remote_get(sprintf($this->url, $this->cityID));
