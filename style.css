@@ -1,19 +1,23 @@
 .weather-block {
+    padding: 0;
     padding-bottom: 10px;
     overflow: auto;
+    display: table;
+    border: 1px solid #cccccc;
+    width: 100%;
 }
-
+.weathers
+{
+    display: table-row;
+}
 .wtr {
-    width: 33%;
-    float: left;
+    display: table-cell;
     text-align: center;
     font-size: 80%;
 }
-
 .wtr-max {
     color: #ff3333;
 }
-
 .wtr-min {
     color: #3333ff;
 }

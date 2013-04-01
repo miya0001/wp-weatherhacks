@@ -12,7 +12,7 @@ require_once(dirname(__FILE__).'/includes/weatherHacks.class.php');
 
 class WeatherHacksWidget extends WP_Widget {
 
-private $forecastmap = 'http://weather.livedoor.com/forecast/rss/forecastmap.xml';
+private $forecastmap = 'http://weather.livedoor.com/forecast/rss/primary_area.xml';
 
 function __construct() {
     parent::__construct(false, $name = '天気予報');
