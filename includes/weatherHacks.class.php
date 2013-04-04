@@ -5,7 +5,7 @@ class weatherHacks{
 private $cityID = 0;
 private $cache_lifetime = 3600;
 
-private $url = 'http://weather.livedoor.com/forecast/webservice/json/v1?city=%d';
+private $url = 'http://weather.livedoor.com/forecast/webservice/json/v1?city=%s';
 private $days = array(
     'today',
     'tomorrow',
