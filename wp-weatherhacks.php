@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Weather Hacks
-Plugin URI: http://firegoby.theta.ne.jp/wp/weatherhacks
+Plugin URI: http://firegoby.jp/wp/weatherhacks
 Description: ライブドアのWeatherHacksのサイドバーウィジェット
-Author: Takayuki Miyauchi (THETA NETWORKS Co,.Ltd)
+Author: Takayuki Miyauchi
 Version: 0.8
-Author URI: http://firegoby.theta.ne.jp/
+Author URI: http://firegoby.jp/
 */
 
 require_once(dirname(__FILE__).'/includes/weatherHacks.class.php');
