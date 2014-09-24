@@ -4,7 +4,7 @@ Plugin Name: Weather Hacks
 Plugin URI: http://firegoby.jp/wp/weatherhacks
 Description: ライブドアのWeatherHacksのサイドバーウィジェット
 Author: Takayuki Miyauchi
-Version: 0.8
+Version: 0.9
 Author URI: http://firegoby.jp/
 */
 
@@ -110,18 +110,16 @@ class wetherHacks {
 
 function __construct()
 {
-    add_action('init', array(&$this, "init"));
-    add_action('widgets_init', array(&$this, "widgets_init"));
-    add_action('wp_print_styles', array(&$this, 'wp_print_styles'));
-    add_action('wp_ajax_weatherhacks', array(&$this, 'wp_ajax'));
-    add_action('wp_ajax_nopriv_weatherhacks', array(&$this, 'wp_ajax'));
+    add_action('admin_enqueue_scripts', array($this, "admin_enqueue_scripts"));
+    add_action('widgets_init', array($this, "widgets_init"));
+    add_action('wp_enqueue_scripts', array($this, 'wp_enqueue_scripts'));
+    add_action('wp_ajax_weatherhacks', array($this, 'wp_ajax'));
+    add_action('wp_ajax_nopriv_weatherhacks', array($this, 'wp_ajax'));
 }
 
-public function init()
+public function admin_enqueue_scripts()
 {
-    if (!is_admin()) {
-        wp_enqueue_script('jquery');
-    }
+    wp_enqueue_script('jquery');
 }
 
 public function widgets_init()
@@ -129,7 +127,7 @@ public function widgets_init()
     return register_widget("WeatherHacksWidget");
 }
 
-public function wp_print_styles()
+public function wp_enqueue_scripts()
 {
     $url = plugins_url('style.css', __FILE__);
     wp_enqueue_style(
