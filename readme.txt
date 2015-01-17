@@ -2,9 +2,9 @@
 Contributors: miyauchi
 Donate link: http://firegoby.jp/
 Tags: weather, sidebar, widget
-Requires at least: 3.4
-Tested up to: 4.0
-Stable tag: 0.9
+Requires at least: 3.8
+Tested up to: 4.1
+Stable tag: 1.0.0
 
 Display weather reports in the sidebar.
 
@@ -36,4 +36,3 @@ The author must acknowledge the thing that the operation guarantee and the suppo
 == Contact ==
 
 twitter @miya0001
-
