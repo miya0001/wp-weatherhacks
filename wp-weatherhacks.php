@@ -4,7 +4,7 @@ Plugin Name: Weather Hacks
 Plugin URI: http://firegoby.jp/wp/weatherhacks
 Description: ライブドアのWeatherHacksのサイドバーウィジェット
 Author: Takayuki Miyauchi
-Version: 1.0.0
+Version: 1.0.1
 Author URI: http://firegoby.jp/
 */
 

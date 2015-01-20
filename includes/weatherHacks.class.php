@@ -27,7 +27,7 @@ public function get_data()
     }
 
     $res = wp_remote_get(sprintf($this->url, $this->cityID));
-    if ($res["response"]["code"] !== 200) {
+    if (200 !== intval($res["response"]["code"])) {
         return false;
     }
 
@@ -94,7 +94,7 @@ private function get_template()
     <div class="wtr-content">%weather%</div>
     <div class="wtr-temp">
         <span class="wtr-max">%max%</span>
-        / 
+        /
         <span class="wtr-min">%min%</span>
     </div>
 </div>';
