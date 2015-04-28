@@ -3,8 +3,8 @@ Contributors: miyauchi
 Donate link: http://firegoby.jp/
 Tags: weather, sidebar, widget
 Requires at least: 3.8
-Tested up to: 4.1
-Stable tag: 1.0.1
+Tested up to: 4.2
+Stable tag: 1.0.2
 
 Display weather reports in the sidebar.
 
